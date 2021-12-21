@@ -25,12 +25,12 @@
         android:id="@+id/iv_Edit_ProfilePic"
         android:layout_width="177dp"
         android:layout_height="188dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="28dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Edit"
-        tools:srcCompat="@drawable/profile" />
+        android:src="@drawable/profile" />
 
     <LinearLayout
         android:id="@+id/lnrlyt_Edit_Name"
@@ -146,7 +146,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Edit_Continue"
+        app:layout_constraintBottom_toTopOf="@+id/btn_EditProfile_Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -174,12 +174,12 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_Edit_Continue"
+        android:id="@+id/btn_EditProfile_Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:fontFamily="@font/reemkufi"
-        android:text="@string/continuee"
+        android:text="@string/submit"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="14sp"

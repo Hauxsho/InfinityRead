@@ -35,7 +35,7 @@ public class LSPermission extends AppCompatActivity {
                 boolean location = checkPermission(Manifest.permission.ACCESS_FINE_LOCATION ,  LOCATION_PERMISSION_CODE);
                 boolean storage  = checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE ,  STORAGE_PERMISSION_CODE);
                 if(location==true && storage==true) {
-                    Intent intent = new Intent(LSPermission.this, Profile_Info.class);
+                    Intent intent = new Intent(LSPermission.this, Homepage.class);
                     startActivity(intent);
                     finish();
                 }
@@ -45,7 +45,7 @@ public class LSPermission extends AppCompatActivity {
         boolean location = checkPermission(Manifest.permission.ACCESS_FINE_LOCATION ,  LOCATION_PERMISSION_CODE);
         boolean storage  = checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE ,  STORAGE_PERMISSION_CODE);
         if(location==true && storage==true) {
-            Intent intent = new Intent(LSPermission.this, Profile_Info.class);
+            Intent intent = new Intent(LSPermission.this, Homepage.class);
             startActivity(intent);
             finish();
         }

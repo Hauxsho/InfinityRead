@@ -52,7 +52,7 @@ public class Profile_Info extends AppCompatActivity
                     ((RadioButton)radioGroup.getChildAt(lastChildPos)).setError("Your error");
                 }
                 else {
-                    Intent intent = new Intent(Profile_Info.this, Homepage.class);
+                    Intent intent = new Intent(Profile_Info.this, LSPermission.class);
                     startActivity(intent);
                     finish();
                 }

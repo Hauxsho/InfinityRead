@@ -190,49 +190,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
 
-            <ImageButton
-                android:layout_width="70dp"
-                android:layout_height="105dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:scaleType="fitXY"
-                android:src="@drawable/upload_button" />
-
-            <ImageButton
-                android:layout_width="70dp"
-                android:layout_height="105dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:scaleType="fitXY"
-                android:src="@drawable/upload_button" />
-
-            <ImageButton
-                android:layout_width="70dp"
-                android:layout_height="105dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:scaleType="fitXY"
-                android:src="@drawable/upload_button" />
-
-        </LinearLayout>
 
 
     </LinearLayout>

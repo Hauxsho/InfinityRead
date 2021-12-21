@@ -9,26 +9,55 @@ import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.noobdevs.infinityread.Model.ModelBookCard;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Homepage extends AppCompatActivity {
+public class Homepage extends AppCompatActivity
+{
     private RecyclerView recyclerView;
     private AdapterBookCard itemAdapter;
     private ArrayList<ModelBookCard> itemList;
+    private ImageButton mapButton ;
+    private FloatingActionButton floatingActionButton ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
+        floatingActionButton = findViewById(R.id.floatingActionButton);
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        mapButton = findViewById(R.id.mapButton);
+
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this ,MapsActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext() , "Add", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext() , Add.class);
+                startActivity(intent);
+            }
+        });
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {

@@ -53,7 +53,7 @@ public class OtpVerification extends AppCompatActivity {
         otpDigit6 = findViewById(R.id.otpDigit6);
         setUpOTPinputs();
 
-        sendVerificationCodeToUser(phoneNumberFromSignIn);
+        //sendVerificationCodeToUser(phoneNumberFromSignIn);
 
 
         btnVerificationVerify.setOnClickListener(new View.OnClickListener() {
@@ -71,10 +71,12 @@ public class OtpVerification extends AppCompatActivity {
                 }
 
                 //ye wala
-
+                intent = new Intent(OtpVerification.this, Profile_Info.class);
+                startActivity(intent);
+                finish();
                 //yaha tak
 
-                verifyCode(code);
+                //verifyCode(code);
             }
         });
 
@@ -189,7 +191,7 @@ public class OtpVerification extends AppCompatActivity {
     }
 
 
-
+/*
     private void sendVerificationCodeToUser(String phoneNumberFromSignIn) {
         mAuth = FirebaseAuth.getInstance();
         PhoneAuthOptions options = PhoneAuthOptions.newBuilder(mAuth)
@@ -242,7 +244,7 @@ public class OtpVerification extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
                 {
-                    intent = new Intent(OtpVerification.this, LSPermission.class);
+                    intent = new Intent(OtpVerification.this, Profile_Info.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     FirebaseUser user = task.getResult().getUser();
@@ -254,6 +256,6 @@ public class OtpVerification extends AppCompatActivity {
             }
         });
     }
-
+*/
 
 }

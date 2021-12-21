@@ -22,6 +22,7 @@ public class Profile extends AppCompatActivity
     FragmentAdapter adapter;
     ViewPager2 viewPager2;
     ImageButton exit ;
+    Button editProfileButton ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class Profile extends AppCompatActivity
         tabLayout =  findViewById(R.id.tabLayout_profile);
         viewPager2 = findViewById(R.id.viewPager_Profile);
         exit = findViewById(R.id.exit);
+        editProfileButton = findViewById(R.id.btn_Profile_editProfile);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
@@ -42,6 +44,14 @@ public class Profile extends AppCompatActivity
         tabLayout.addTab(tabLayout.newTab().setText("Uploads"));
         tabLayout.addTab(tabLayout.newTab().setText("Borrowed"));
         tabLayout.addTab(tabLayout.newTab().setText("WishList"));
+
+        editProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Profile.this , Profile_Settings.class);
+                startActivity(intent);
+            }
+        });
 
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
